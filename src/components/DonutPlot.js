@@ -6,8 +6,11 @@ const DonutPlot = () => {
         bb.generate({
             data: {
                 columns: [
-                    ["data1", 30],
-                    ["data2", 120],
+                    ["good", 294],
+                    ["excellent", 201],
+                    ["fair", 59],
+                    ["like new", 23],
+                    ["salvage", 2],
                 ],
                 type: donut(),
                 onclick: function (d, i) {
