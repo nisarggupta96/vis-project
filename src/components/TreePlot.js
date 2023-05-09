@@ -27,8 +27,8 @@ const TreePlot = ({
             padding: {
                 top: 10,
                 bottom: 10,
-                left: 10,
-                right: 10,
+                left: 20,
+                right: 20,
             },
             data: {
                 columns: selectedManufacturer == "all" ? level_1 : level_2,

@@ -90,6 +90,26 @@ a {
   }
 }
 
+body {
+  font-family: "Inter" !important;
+}
+
+svg * {
+  font-family: "Inter" !important;
+}
+
+html[data-theme="dark"] text {
+  fill: white;
+}
+
+html[data-theme="dark"] .bb-tooltip td {
+  color: black;
+}
+
+html[data-theme="dark"] path {
+  stroke: white;
+}
+
 svg text {
   font-weight: bold;
   text-rendering: geometricPrecision;

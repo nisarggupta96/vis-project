@@ -65,6 +65,7 @@ const MapChart = ({ map_data, selectedState, handleStateSelect }) => {
                                             stroke="#FFF"
                                             geography={geo}
                                             fill={colorScale(map_data[cur.id])}
+                                            opacity={map_data[cur.id] ? 1 : 0.3}
                                             style={{
                                                 default: {
                                                     outline: "transparent",
@@ -108,8 +109,13 @@ const MapChart = ({ map_data, selectedState, handleStateSelect }) => {
                                                             fontSize={6}
                                                             textAnchor="middle"
                                                         >
-                                                            {cur.id}(
-                                                            {map_data[cur.id]})
+                                                            {cur.id}
+                                                            {map_data[cur.id] &&
+                                                                `(${
+                                                                    map_data[
+                                                                        cur.id
+                                                                    ]
+                                                                })`}
                                                         </text>
                                                     </Marker>
                                                 ) : (
@@ -123,8 +129,13 @@ const MapChart = ({ map_data, selectedState, handleStateSelect }) => {
                                                             fontSize={6}
                                                             alignmentBaseline="middle"
                                                         >
-                                                            {cur.id}(
-                                                            {map_data[cur.id]})
+                                                            {cur.id}
+                                                            {map_data[cur.id] &&
+                                                                `(${
+                                                                    map_data[
+                                                                        cur.id
+                                                                    ]
+                                                                })`}
                                                         </text>
                                                     </Annotation>
                                                 ))}

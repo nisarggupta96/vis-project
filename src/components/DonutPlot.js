@@ -8,12 +8,20 @@ const DonutPlot = ({ pie_data }) => {
             data: {
                 columns: pie_data,
                 type: donut(),
-                onclick: function (d, i) {
-                    console.log("onclick", d, i);
+                // onclick: function (d, i) {
+                //     console.log("onclick", d, i);
+                // },
+                colors: {
+                    excellent: "#b7003f",
+                    good: "#fa5d0f",
+                    "like new": "#8e5d00",
+                    fair: "#2b1055",
+                    new: "#710462",
+                    salvage: "#ffb427",
                 },
             },
             donut: {
-                title: "Condition",
+                title: "Condition\n % share",
             },
             bindto: "#donut_plot",
         });

@@ -184,6 +184,8 @@ export default function Nav({ children }) {
                             alignItems={"center"}
                         >
                             <SummaryStats
+                                selectedManufacturer={selectedManufacturer}
+                                selectedState={selectedState}
                                 yearStart={yearStart}
                                 yearEnd={yearEnd}
                                 totalSales={summary_data.total_sales_count}
