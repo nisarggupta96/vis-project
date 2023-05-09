@@ -92,6 +92,9 @@ a {
 
 body {
   font-family: "Inter" !important;
+  max-height: 100vh;
+  max-width: 100vw;
+  overflow: hidden;
 }
 
 svg * {

@@ -10,6 +10,7 @@ const labelStyles = {
     mt: "3",
     ml: "-2.5",
     fontSize: "sm",
+    fontWeight: "bold",
 };
 
 const years = [...Array(23).keys()].map((i) => i + 2000);
@@ -31,7 +32,7 @@ const TimeSelection = ({ handleTimeChange }) => {
                 </RangeSliderMark>
             ))}
             <RangeSliderTrack h={4} bg="red.100">
-                <RangeSliderFilledTrack bg="tomato" />
+                <RangeSliderFilledTrack bg="red" />
             </RangeSliderTrack>
             <RangeSliderThumb
                 borderColor={"red"}
