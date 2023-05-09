@@ -1,9 +1,16 @@
 import { useEffect, useRef } from "react";
 import treedata from "./data/treeplot.json";
 import bb, { treemap } from "billboard.js";
+import { RepeatIcon } from "@chakra-ui/icons";
+import { Box } from "@chakra-ui/react";
 
-const TreePlot = () => {
+const TreePlot = ({
+    treemap_data,
+    selectedManufacturer,
+    handleManufacturerSelect,
+}) => {
     const ref = useRef(null);
+    const { level_1, level_2 } = treemap_data;
 
     useEffect(() => {
         let chart = bb.generate({
@@ -12,7 +19,11 @@ const TreePlot = () => {
                 height: ref.current.clientHeight,
             },
             title: {
-                text: "Manufacturer Distribution",
+                text: `${
+                    selectedManufacturer == "all"
+                        ? "Manufacturer distribution"
+                        : `${selectedManufacturer} distribution`
+                }`,
             },
             padding: {
                 top: 10,
@@ -21,7 +32,7 @@ const TreePlot = () => {
                 right: 10,
             },
             data: {
-                columns: treedata,
+                columns: selectedManufacturer == "all" ? level_1 : level_2,
                 type: treemap(),
                 labels: {
                     colors: "#fff",
@@ -40,13 +51,23 @@ const TreePlot = () => {
         });
         chart.$.chart.on("click", function (e) {
             console.log(e.srcElement.__data__.data);
+            const { id } = e.srcElement.__data__.data;
+            handleManufacturerSelect(id);
         });
-    }, []);
+    }, [level_1, level_2]);
 
     return (
-        <div style={{ height: "100%", width: "100%" }} ref={ref}>
+        <Box position={"relative"} height={"100%"} width={"100%"} ref={ref}>
             <div id="tree_plot" />
-        </div>
+            {selectedManufacturer != "all" && (
+                <RepeatIcon
+                    onClick={() => handleManufacturerSelect("all")}
+                    position={"absolute"}
+                    top={"5px"}
+                    right={"10px"}
+                />
+            )}
+        </Box>
     );
 };
 

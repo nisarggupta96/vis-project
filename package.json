@@ -14,11 +14,11 @@
     "@emotion/react": "^11.11.0",
     "@emotion/styled": "^11.11.0",
     "@fontsource/oswald": "^4.5.12",
+    "axios": "^1.4.0",
     "billboard.js": "^3.8.0-next.2",
     "d3": "^7.8.4",
     "framer-motion": "^10.12.8",
     "next": "13.3.1",
-    "parcoord-es": "^2.2.10",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-simple-maps": "^3.0.0"

@@ -14,9 +14,17 @@ const labelStyles = {
 
 const years = [...Array(23).keys()].map((i) => i + 2000);
 
-const TimeSelection = () => {
+const TimeSelection = ({ handleTimeChange }) => {
     return (
-        <RangeSlider defaultValue={[2000, 2022]} min={2000} max={2022} step={1}>
+        <RangeSlider
+            defaultValue={[2000, 2022]}
+            min={2000}
+            max={2022}
+            step={1}
+            onChange={([year_start, year_end]) =>
+                handleTimeChange(year_start, year_end)
+            }
+        >
             {years.map((year) => (
                 <RangeSliderMark key={year} value={year} {...labelStyles}>
                     {year}

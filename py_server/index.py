@@ -12,9 +12,6 @@ def get_data():
     df_filtered = df.copy()
     if request.data:
         args = request.get_json(force=True)
-        # print('args["manufacturer"]', args["manufacturer"])
-        # print('args["year_start"]', args["year_start"])
-        # print('args["year_end"]', args["year_end"])
 
         year_start, year_end = 2000, 2020
         if "year_start" in args:
@@ -24,17 +21,22 @@ def get_data():
         df_time_filtered = df_filtered.loc[
             (df_filtered["year"] >= year_start) & (df_filtered["year"] <= year_end)]
 
-        if "manufacturer" in args:
-            df_man_filtered = df_time_filtered.loc[
+        df_filtered = df_time_filtered.copy()
+        if "manufacturer" in args and args["manufacturer"] != "all":
+            df_filtered = df_time_filtered.loc[
                 df_time_filtered["manufacturer"] == args["manufacturer"]]
-        else:
-            df_man_filtered = df_time_filtered.copy()
+        if "state" in args and args["state"] != "all":
+            df_filtered = df_filtered.loc[
+                df_filtered["state"] == args["state"]]
+            df_time_filtered = df_time_filtered.loc[
+                df_time_filtered["state"] == args["state"]]
 
-    state_counts = df_man_filtered["state"].value_counts().to_dict()
+    state_counts = df_filtered["state"].value_counts().to_dict()
     condition_counts = [
-        [k, v] for k, v in df_man_filtered["condition"].value_counts().to_dict().items()]
+        [k, v] for k, v in df_filtered["condition"].value_counts().to_dict().items()
+    ]
 
-    grouped_color_cylinder = df_man_filtered.groupby(
+    grouped_color_cylinder = df_filtered.groupby(
         ['cylinders', 'paint_color']).size().reset_index(name='count')
     colors = grouped_color_cylinder["paint_color"].unique()
     cyls = grouped_color_cylinder["cylinders"].unique()
@@ -62,7 +64,7 @@ def get_data():
         'odometer', 'mean'), count=('price', 'count')).sort_values(['count'], ascending=False).head(15)
 
     stacked_bar_data = {
-        "manufactrers": list(man_vs_price.index),
+        "manufacturers": list(man_vs_price.index),
         "price": ['price'] + list(man_vs_price["price"].values.round(3)),
         "odometer": ['odometer'] + list(man_vs_price["odometer"].values.round(3))
     }
@@ -73,7 +75,7 @@ def get_data():
     treemap_l2 = []
     if "manufacturer" in args:
         treemap_l2 = [
-            [k, v] for k, v in df_man_filtered["type"].value_counts().to_dict().items()
+            [k, v] for k, v in df_filtered["type"].value_counts().to_dict().items()
         ]
     treemap_data = {
         "level_1": list(treemap_l1),

@@ -1,6 +1,6 @@
 import "@/styles/globals.css";
 import { ChakraProvider } from "@chakra-ui/react";
-import Layout from "../components/layout";
+import Layout from "../components/Layout";
 import "@fontsource/oswald/400.css";
 import theme from "@/helpers/theme";
 
