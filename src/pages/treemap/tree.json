@@ -1,0 +1,377 @@
+{
+    "children": [
+        {
+            "name": "chevrolet",
+            "colname": "level2",
+            "children": [
+                {
+                    "name": "camaro ss coupe 2d",
+                    "colname": "level3",
+                    "group": "camaro ss coupe 2d",
+                    "value": 423
+                },
+                {
+                    "name": "corvette",
+                    "colname": "level3",
+                    "group": "corvette",
+                    "value": 308
+                },
+                {
+                    "name": "corvette grand sport",
+                    "colname": "level3",
+                    "group": "corvette grand sport",
+                    "value": 365
+                },
+                {
+                    "name": "cruze",
+                    "colname": "level3",
+                    "group": "cruze",
+                    "value": 339
+                },
+                {
+                    "name": "equinox",
+                    "colname": "level3",
+                    "group": "equinox",
+                    "value": 419
+                },
+                {
+                    "name": "impala",
+                    "colname": "level3",
+                    "group": "impala",
+                    "value": 490
+                },
+                {
+                    "name": "malibu",
+                    "colname": "level3",
+                    "group": "malibu",
+                    "value": 385
+                },
+                {
+                    "name": "silverado",
+                    "colname": "level3",
+                    "group": "silverado",
+                    "value": 617
+                },
+                {
+                    "name": "silverado 1500",
+                    "colname": "level3",
+                    "group": "silverado 1500",
+                    "value": 1347
+                },
+                {
+                    "name": "silverado 1500 double",
+                    "colname": "level3",
+                    "group": "silverado 1500 double",
+                    "value": 306
+                },
+                {
+                    "name": "silverado 2500hd",
+                    "colname": "level3",
+                    "group": "silverado 2500hd",
+                    "value": 434
+                },
+                {
+                    "name": "tahoe",
+                    "colname": "level3",
+                    "group": "tahoe",
+                    "value": 383
+                }
+            ]
+        },
+        {
+            "name": "dodge",
+            "colname": "level2",
+            "children": [
+                {
+                    "name": "challenger r/t coupe 2d",
+                    "colname": "level3",
+                    "group": "challenger r/t coupe 2d",
+                    "value": 311
+                },
+                {
+                    "name": "charger",
+                    "colname": "level3",
+                    "group": "charger",
+                    "value": 307
+                },
+                {
+                    "name": "grand caravan",
+                    "colname": "level3",
+                    "group": "grand caravan",
+                    "value": 417
+                }
+            ]
+        },
+        {
+            "name": "ford",
+            "colname": "level2",
+            "children": [
+                {
+                    "name": "escape",
+                    "colname": "level3",
+                    "group": "escape",
+                    "value": 611
+                },
+                {
+                    "name": "explorer",
+                    "colname": "level3",
+                    "group": "explorer",
+                    "value": 501
+                },
+                {
+                    "name": "f-150",
+                    "colname": "level3",
+                    "group": "f-150",
+                    "value": 1541
+                },
+                {
+                    "name": "f150",
+                    "colname": "level3",
+                    "group": "f150",
+                    "value": 363
+                },
+                {
+                    "name": "focus",
+                    "colname": "level3",
+                    "group": "focus",
+                    "value": 487
+                },
+                {
+                    "name": "fusion",
+                    "colname": "level3",
+                    "group": "fusion",
+                    "value": 391
+                },
+                {
+                    "name": "fusion se",
+                    "colname": "level3",
+                    "group": "fusion se",
+                    "value": 304
+                },
+                {
+                    "name": "mustang",
+                    "colname": "level3",
+                    "group": "mustang",
+                    "value": 405
+                },
+                {
+                    "name": "mustang gt coupe 2d",
+                    "colname": "level3",
+                    "group": "mustang gt coupe 2d",
+                    "value": 377
+                }
+            ]
+        },
+        {
+            "name": "gmc",
+            "colname": "level2",
+            "children": [
+                {
+                    "name": "sierra 1500",
+                    "colname": "level3",
+                    "group": "sierra 1500",
+                    "value": 387
+                },
+                {
+                    "name": "sierra 2500hd",
+                    "colname": "level3",
+                    "group": "sierra 2500hd",
+                    "value": 315
+                }
+            ]
+        },
+        {
+            "name": "honda",
+            "colname": "level2",
+            "children": [
+                {
+                    "name": "accord",
+                    "colname": "level3",
+                    "group": "accord",
+                    "value": 743
+                },
+                {
+                    "name": "civic",
+                    "colname": "level3",
+                    "group": "civic",
+                    "value": 735
+                },
+                {
+                    "name": "cr-v",
+                    "colname": "level3",
+                    "group": "cr-v",
+                    "value": 396
+                },
+                {
+                    "name": "odyssey",
+                    "colname": "level3",
+                    "group": "odyssey",
+                    "value": 380
+                }
+            ]
+        },
+        {
+            "name": "hyundai",
+            "colname": "level2",
+            "children": [
+                {
+                    "name": "elantra",
+                    "colname": "level3",
+                    "group": "elantra",
+                    "value": 366
+                },
+                {
+                    "name": "sonata",
+                    "colname": "level3",
+                    "group": "sonata",
+                    "value": 418
+                }
+            ]
+        },
+        {
+            "name": "jeep",
+            "colname": "level2",
+            "children": [
+                {
+                    "name": "grand cherokee",
+                    "colname": "level3",
+                    "group": "grand cherokee",
+                    "value": 448
+                },
+                {
+                    "name": "wrangler",
+                    "colname": "level3",
+                    "group": "wrangler",
+                    "value": 595
+                }
+            ]
+        },
+        {
+            "name": "nissan",
+            "colname": "level2",
+            "children": [
+                {
+                    "name": "altima",
+                    "colname": "level3",
+                    "group": "altima",
+                    "value": 705
+                },
+                {
+                    "name": "rogue",
+                    "colname": "level3",
+                    "group": "rogue",
+                    "value": 303
+                },
+                {
+                    "name": "sentra",
+                    "colname": "level3",
+                    "group": "sentra",
+                    "value": 329
+                }
+            ]
+        },
+        {
+            "name": "ram",
+            "colname": "level2",
+            "children": [
+                {
+                    "name": "1500",
+                    "colname": "level3",
+                    "group": "1500",
+                    "value": 842
+                },
+                {
+                    "name": "1500 crew cab big horn",
+                    "colname": "level3",
+                    "group": "1500 crew cab big horn",
+                    "value": 355
+                },
+                {
+                    "name": "2500",
+                    "colname": "level3",
+                    "group": "2500",
+                    "value": 475
+                }
+            ]
+        },
+        {
+            "name": "subaru",
+            "colname": "level2",
+            "children": [
+                {
+                    "name": "forester",
+                    "colname": "level3",
+                    "group": "forester",
+                    "value": 345
+                },
+                {
+                    "name": "outback",
+                    "colname": "level3",
+                    "group": "outback",
+                    "value": 412
+                }
+            ]
+        },
+        {
+            "name": "toyota",
+            "colname": "level2",
+            "children": [
+                {
+                    "name": "4runner",
+                    "colname": "level3",
+                    "group": "4runner",
+                    "value": 301
+                },
+                {
+                    "name": "camry",
+                    "colname": "level3",
+                    "group": "camry",
+                    "value": 795
+                },
+                {
+                    "name": "corolla",
+                    "colname": "level3",
+                    "group": "corolla",
+                    "value": 520
+                },
+                {
+                    "name": "prius",
+                    "colname": "level3",
+                    "group": "prius",
+                    "value": 441
+                },
+                {
+                    "name": "rav4",
+                    "colname": "level3",
+                    "group": "rav4",
+                    "value": 353
+                },
+                {
+                    "name": "tacoma",
+                    "colname": "level3",
+                    "group": "tacoma",
+                    "value": 620
+                },
+                {
+                    "name": "tundra",
+                    "colname": "level3",
+                    "group": "tundra",
+                    "value": 301
+                }
+            ]
+        },
+        {
+            "name": "volkswagen",
+            "colname": "level2",
+            "children": [
+                {
+                    "name": "jetta",
+                    "colname": "level3",
+                    "group": "jetta",
+                    "value": 368
+                }
+            ]
+        }
+    ],
+    "name": "Sales"
+}
