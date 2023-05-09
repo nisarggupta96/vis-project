@@ -148,7 +148,6 @@ export default function Nav({ children }) {
                             w={"40%"}
                             display={"flex"}
                             flexDirection={"column"}
-                            p={2}
                         >
                             <Box h={"40%"}>
                                 <DonutPlot pie_data={pie_data} />

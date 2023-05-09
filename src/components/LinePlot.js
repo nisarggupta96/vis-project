@@ -8,6 +8,12 @@ const LinePlot = ({ line_data }) => {
 
     useEffect(() => {
         bb.generate({
+            title: {
+                text: "Colors vs Cylinders Count",
+                padding: {
+                    top: 10,
+                },
+            },
             size: {
                 width: ref.current.clientWidth,
                 height: ref.current.clientHeight,

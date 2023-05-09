@@ -101,6 +101,10 @@ svg * {
   font-family: "Play" !important;
 }
 
+.bb-title {
+  font-weight: bold !important;
+}
+
 html[data-theme="dark"] text {
   fill: white;
 }

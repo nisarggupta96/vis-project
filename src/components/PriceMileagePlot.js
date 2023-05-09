@@ -16,6 +16,9 @@ const PriceMileagePlot = ({ stacked_bar_data }) => {
             },
             title: {
                 text: "Avg Price vs Odometer",
+                padding: {
+                    top: 15,
+                },
             },
             data: {
                 columns: [price, odometer],
@@ -57,7 +60,7 @@ const PriceMileagePlot = ({ stacked_bar_data }) => {
         });
     }, [manufacturers, odometer, price]);
 
-    return <Box pt={5} height={"100%"} ref={ref} id="price_mileage_plot" />;
+    return <Box height={"100%"} ref={ref} id="price_mileage_plot" />;
 };
 
 export default PriceMileagePlot;

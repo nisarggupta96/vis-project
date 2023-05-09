@@ -30,9 +30,9 @@ const offsets = {
 
 const MapChart = ({ map_data, selectedState, handleStateSelect }) => {
     const colorScale = d3
-        .scaleSequential()
+        .scaleSequentialSqrt()
         .domain([0, Math.max(...Object.values(map_data))])
-        .interpolator(d3.interpolateRdYlGn);
+        .interpolator(d3.interpolatePuBu);
 
     return (
         <Box position={"relative"} style={{ height: "100%" }}>
@@ -108,6 +108,9 @@ const MapChart = ({ map_data, selectedState, handleStateSelect }) => {
                                                             y="2"
                                                             fontSize={6}
                                                             textAnchor="middle"
+                                                            style={{
+                                                                fill: "black",
+                                                            }}
                                                         >
                                                             {cur.id}
                                                             {map_data[cur.id] &&
