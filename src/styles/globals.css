@@ -91,14 +91,14 @@ a {
 }
 
 body {
-  font-family: "Inter" !important;
+  font-family: "Play" !important;
   max-height: 100vh;
   max-width: 100vw;
   overflow: hidden;
 }
 
 svg * {
-  font-family: "Inter" !important;
+  font-family: "Play" !important;
 }
 
 html[data-theme="dark"] text {
