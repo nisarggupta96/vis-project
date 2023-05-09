@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import bb, { line } from "billboard.js";
+import { Box } from "@chakra-ui/react";
 
 const LinePlot = ({ line_data }) => {
     const ref = useRef(null);
@@ -9,7 +10,7 @@ const LinePlot = ({ line_data }) => {
         bb.generate({
             size: {
                 width: ref.current.clientWidth,
-                height: 430,
+                height: ref.current.clientHeight,
             },
             padding: {
                 bottom: 20,
@@ -28,7 +29,7 @@ const LinePlot = ({ line_data }) => {
         });
     }, [color_cyl_counts, cylinders]);
 
-    return <div height={"100%"} ref={ref} id="line_plot" />;
+    return <Box height={"100%"} ref={ref} id="line_plot" />;
 };
 
 export default LinePlot;

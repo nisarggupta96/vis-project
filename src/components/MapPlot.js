@@ -35,7 +35,7 @@ const MapChart = ({ map_data, selectedState, handleStateSelect }) => {
         .interpolator(d3.interpolateRdYlGn);
 
     return (
-        <Box position={"relative"}>
+        <Box position={"relative"} style={{ height: "100%" }}>
             <ComposableMap
                 projection="geoAlbersUsa"
                 projectionConfig={{

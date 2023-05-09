@@ -1,3 +1,4 @@
+import { Box } from "@chakra-ui/react";
 import bb, { bar } from "billboard.js";
 import { useEffect, useRef } from "react";
 
@@ -8,7 +9,10 @@ const PriceMileagePlot = ({ stacked_bar_data }) => {
     useEffect(() => {
         bb.generate({
             size: {
-                height: 475,
+                height: ref.current.clientHeight,
+            },
+            padding: {
+                top: 20,
             },
             title: {
                 text: "Avg Price vs Odometer",
@@ -53,7 +57,7 @@ const PriceMileagePlot = ({ stacked_bar_data }) => {
         });
     }, [manufacturers, odometer, price]);
 
-    return <div height={"100%"} ref={ref} id="price_mileage_plot" />;
+    return <Box height={"100%"} ref={ref} id="price_mileage_plot" />;
 };
 
 export default PriceMileagePlot;

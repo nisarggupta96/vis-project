@@ -1,5 +1,4 @@
 import { useEffect, useRef } from "react";
-import treedata from "./data/treeplot.json";
 import bb, { treemap } from "billboard.js";
 import { RepeatIcon } from "@chakra-ui/icons";
 import { Box } from "@chakra-ui/react";
@@ -44,7 +43,7 @@ const TreePlot = ({
             treemap: {
                 tile: "squarify",
                 label: {
-                    threshold: 0.01,
+                    threshold: 0.02,
                 },
             },
             bindto: "#tree_plot",

@@ -60,8 +60,13 @@ def get_data():
         "cylinders": list(cyls)
     }
 
-    man_vs_price = df_time_filtered.groupby('manufacturer').agg(price=('price', 'mean'), odometer=(
-        'odometer', 'mean'), count=('price', 'count')).sort_values(['count'], ascending=False).head(15)
+    if "manufacturer" in args and args["manufacturer"] != "all":
+        man_vs_price = df_filtered.groupby('model').agg(price=('price', 'mean'), odometer=(
+            'odometer', 'mean'), count=('price', 'count')).sort_values(['count'], ascending=False).head(15)
+
+    else:
+        man_vs_price = df_time_filtered.groupby('manufacturer').agg(price=('price', 'mean'), odometer=(
+            'odometer', 'mean'), count=('price', 'count')).sort_values(['count'], ascending=False).head(15)
 
     stacked_bar_data = {
         "manufacturers": list(man_vs_price.index),
@@ -82,12 +87,28 @@ def get_data():
         "level_2": list(treemap_l2)
     }
 
+    total_sales_count = len(df_filtered)
+    average_cost = df_filtered["price"].mean()
+    max_sale_model_count = df_filtered["model"].value_counts(
+    ).sort_values(ascending=False).head(1)
+
+    max_sale_manufacturer = df_filtered.loc[df_filtered["model"] == max_sale_model_count.index[0]]["manufacturer"].head(1).values[0]
+
+    summary_data = {
+        "total_sales_count": float(total_sales_count),
+        "average_cost": float(round(average_cost, 3)),
+        "max_sale_manufacturer": max_sale_manufacturer,
+        "max_sale_model": str(max_sale_model_count.index[0]),
+        "max_sale_count": int(max_sale_model_count[0])
+    }
+
     return {
         "map_data": state_counts,
         "pie_data": condition_counts,
         "line_data": color_cyl_data,
         "stacked_bar_data": stacked_bar_data,
-        "treemap_data": treemap_data
+        "treemap_data": treemap_data,
+        "summary_data": summary_data
     }
 
 

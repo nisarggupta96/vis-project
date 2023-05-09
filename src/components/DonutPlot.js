@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import bb, { donut } from "billboard.js";
+import { Box } from "@chakra-ui/react";
 
 const DonutPlot = ({ pie_data }) => {
     useEffect(() => {
@@ -17,7 +18,7 @@ const DonutPlot = ({ pie_data }) => {
             bindto: "#donut_plot",
         });
     }, [pie_data]);
-    return <div id="donut_plot"></div>;
+    return <Box height={"100%"} id="donut_plot" />;
 };
 
 export default DonutPlot;
