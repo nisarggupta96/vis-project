@@ -71,10 +71,8 @@ const TreePlot = ({
                 columns: selectedManufacturer == "all" ? level_1 : level_2,
                 type: treemap(),
                 labels: {
+                    centered: true,
                     colors: "#000",
-                },
-                onclick: function (d, i) {
-                    console.log("onout", d, i);
                 },
                 colors: selectedManufacturer == "all" ? clevel1 : clevel2,
             },
@@ -87,9 +85,13 @@ const TreePlot = ({
             bindto: "#tree_plot",
         });
         chart.$.chart.on("click", function (e) {
-            const { id } = e.srcElement.__data__.data;
-            if (selectedManufacturer == "all") {
-                handleManufacturerSelect(id);
+            try {
+                const { id } = e.srcElement.__data__.data;
+                if (selectedManufacturer == "all") {
+                    handleManufacturerSelect(id);
+                }
+            } catch (e) {
+                //
             }
         });
     }, [level_1, level_2]);
@@ -101,8 +103,10 @@ const TreePlot = ({
                 <RepeatIcon
                     onClick={() => handleManufacturerSelect("all")}
                     position={"absolute"}
-                    top={"5px"}
+                    top={"10px"}
                     right={"10px"}
+                    h={5}
+                    w={5}
                 />
             )}
         </Box>

@@ -133,3 +133,12 @@ svg text {
   transform: translateY(5px);
   font-weight: bold;
 }
+
+#line_plot .bb-chart-line path {
+  stroke-width: 2px;
+}
+
+#line_plot .bb-legend rect {
+  stroke: none;
+  fill: transparent;
+}

@@ -234,9 +234,6 @@ const StackedBarPlot = () => {
                         "hatchback",
                     ],
                 ],
-                onclick: function (e, d) {
-                    console.log(e, d);
-                },
             },
             bar: {
                 width: {

@@ -53,14 +53,7 @@ const MapChart = ({ map_data, selectedState, handleStateSelect }) => {
                     width={400}
                     height={220}
                 >
-                    <ZoomableGroup
-                        center={[0, 0]}
-                        minZoom={1}
-                        maxZoom={5}
-                        onMoveStart={({ coordinates, zoom }) => {
-                            console.log(coordinates, zoom);
-                        }}
-                    >
+                    <ZoomableGroup center={[0, 0]} minZoom={1} maxZoom={5}>
                         <Geographies geography={geoUrl}>
                             {({ geographies }) => (
                                 <>
@@ -96,7 +89,6 @@ const MapChart = ({ map_data, selectedState, handleStateSelect }) => {
                                                     },
                                                 }}
                                                 onFocus={() => {
-                                                    console.log(cur);
                                                     handleStateSelect(cur.id);
                                                 }}
                                             />
@@ -191,8 +183,10 @@ const MapChart = ({ map_data, selectedState, handleStateSelect }) => {
                     <RepeatIcon
                         onClick={() => handleStateSelect("all")}
                         position={"absolute"}
-                        top={"5px"}
+                        top={"10px"}
                         right={"10px"}
+                        h={5}
+                        w={5}
                     />
                 )}
             </Box>

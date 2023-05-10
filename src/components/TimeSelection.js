@@ -36,13 +36,13 @@ const TimeSelection = ({ handleTimeChange }) => {
             </RangeSliderTrack>
             <RangeSliderThumb
                 borderColor={"#1D1F20"}
-                borderWidth={3}
+                borderWidth={2}
                 boxSize={6}
                 index={0}
             />
             <RangeSliderThumb
                 borderColor={"#1D1F20"}
-                borderWidth={3}
+                borderWidth={2}
                 boxSize={6}
                 index={1}
             />

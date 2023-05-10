@@ -15,7 +15,7 @@ const DonutPlot = ({ pie_data }) => {
                     excellent: "#b7003f",
                     good: "#fa5d0f",
                     "like new": "#8e5d00",
-                    fair: "#2b1055",
+                    fair: "#005fc3",
                     new: "#710462",
                     salvage: "#ffb427",
                 },

@@ -7,6 +7,7 @@ import {
     useColorMode,
     Text,
     Spinner,
+    Divider,
 } from "@chakra-ui/react";
 import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 import MapChart from "./MapPlot";
@@ -30,12 +31,12 @@ export default function Nav({ children }) {
 
     useEffect(() => {
         const getData = async () => {
-            console.log(
-                yearStart,
-                yearEnd,
-                selectedState,
-                selectedManufacturer
-            );
+            // console.log(
+            //     yearStart,
+            //     yearEnd,
+            //     selectedState,
+            //     selectedManufacturer
+            // );
             const data = await (
                 await axios.post("/api/get_data", {
                     yearStart: yearStart,
@@ -44,7 +45,7 @@ export default function Nav({ children }) {
                     manufacturer: selectedManufacturer,
                 })
             ).data;
-            console.log(data);
+            // console.log(data);
             setAppData(data);
         };
         getData();
@@ -154,6 +155,7 @@ export default function Nav({ children }) {
                             </Box>
                             <Box h={"60%"}>
                                 <PriceMileagePlot
+                                    selectedManufacturer={selectedManufacturer}
                                     stacked_bar_data={stacked_bar_data}
                                 />
                             </Box>
