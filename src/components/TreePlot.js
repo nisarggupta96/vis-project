@@ -4,26 +4,26 @@ import { RepeatIcon } from "@chakra-ui/icons";
 import { Box } from "@chakra-ui/react";
 
 const colorsList = [
-    "#e6194B",
-    "#3cb44b",
-    "#ffe119",
-    "#4363d8",
-    "#f58231",
-    "#911eb4",
-    "#42d4f4",
-    "#f032e6",
-    "#bfef45",
-    "#fabed4",
-    "#469990",
-    "#dcbeff",
-    "#9A6324",
-    "#fffac8",
-    "#800000",
-    "#aaffc3",
-    "#808000",
-    "#ffd8b1",
-    "#000075",
-    "#a9a9a9",
+    "#bedb39",
+    "#a8c545",
+    "#a9cf54",
+    "#96ca2d",
+    "#b5e655",
+    "#bdf271",
+    "#588f27",
+    "#689f38",
+    "#91c46c",
+    "#b1ff91",
+    "#66bb6a",
+    "#43a047",
+    "#468966",
+    "#45bf55",
+    "#79bd8f",
+    "#168039",
+    "#289976",
+    "#1bbc9b",
+    "#00796b",
+    "#04756f",
 ];
 
 const TreePlot = ({
@@ -71,12 +71,12 @@ const TreePlot = ({
                 columns: selectedManufacturer == "all" ? level_1 : level_2,
                 type: treemap(),
                 labels: {
-                    colors: "#fff",
+                    colors: "#000",
                 },
                 onclick: function (d, i) {
                     console.log("onout", d, i);
                 },
-                // colors: selectedManufacturer == "all" ? clevel1 : clevel2,
+                colors: selectedManufacturer == "all" ? clevel1 : clevel2,
             },
             treemap: {
                 tile: "squarify",
