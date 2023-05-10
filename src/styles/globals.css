@@ -103,6 +103,7 @@ svg * {
 
 .bb-title {
   font-weight: bold !important;
+  font-size: 16px !important;
 }
 
 html[data-theme="dark"] text {

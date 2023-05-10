@@ -21,7 +21,7 @@ const DonutPlot = ({ pie_data }) => {
                 },
             },
             donut: {
-                title: "Condition\n % share",
+                title: "Car condition",
             },
             bindto: "#donut_plot",
         });
