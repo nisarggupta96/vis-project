@@ -3,6 +3,29 @@ import bb, { treemap } from "billboard.js";
 import { RepeatIcon } from "@chakra-ui/icons";
 import { Box } from "@chakra-ui/react";
 
+const colorsList = [
+    "#e6194B",
+    "#3cb44b",
+    "#ffe119",
+    "#4363d8",
+    "#f58231",
+    "#911eb4",
+    "#42d4f4",
+    "#f032e6",
+    "#bfef45",
+    "#fabed4",
+    "#469990",
+    "#dcbeff",
+    "#9A6324",
+    "#fffac8",
+    "#800000",
+    "#aaffc3",
+    "#808000",
+    "#ffd8b1",
+    "#000075",
+    "#a9a9a9",
+];
+
 const TreePlot = ({
     treemap_data,
     selectedManufacturer,
@@ -10,6 +33,16 @@ const TreePlot = ({
 }) => {
     const ref = useRef(null);
     const { level_1, level_2 } = treemap_data;
+    const clevel1 = {};
+    const clevel2 = {};
+    for (let i = 0; i < level_1.length; i++) {
+        clevel1[level_1[i][0]] = colorsList[i];
+    }
+    if (level_2.length > 0) {
+        for (let i = 0; i < level_2.length; i++) {
+            clevel2[level_2[i][0]] = colorsList[i];
+        }
+    }
 
     useEffect(() => {
         let chart = bb.generate({
@@ -23,6 +56,10 @@ const TreePlot = ({
                         ? "Manufacturer distribution"
                         : `${selectedManufacturer} distribution`
                 }`,
+                padding: {
+                    top: 10,
+                    bottom: 10,
+                },
             },
             padding: {
                 top: 10,
@@ -39,6 +76,7 @@ const TreePlot = ({
                 onclick: function (d, i) {
                     console.log("onout", d, i);
                 },
+                // colors: selectedManufacturer == "all" ? clevel1 : clevel2,
             },
             treemap: {
                 tile: "squarify",
@@ -49,9 +87,10 @@ const TreePlot = ({
             bindto: "#tree_plot",
         });
         chart.$.chart.on("click", function (e) {
-            console.log(e.srcElement.__data__.data);
             const { id } = e.srcElement.__data__.data;
-            handleManufacturerSelect(id);
+            if (selectedManufacturer == "all") {
+                handleManufacturerSelect(id);
+            }
         });
     }, [level_1, level_2]);
 

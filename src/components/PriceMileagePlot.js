@@ -32,6 +32,10 @@ const PriceMileagePlot = ({ stacked_bar_data }) => {
                 onclick: function (d, elem) {
                     console.log(d, elem);
                 },
+                colors: {
+                    price: "#CF3D24",
+                    odometer: "#F78E20",
+                },
             },
             axis: {
                 rotated: true,

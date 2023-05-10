@@ -43,7 +43,7 @@ const SummaryStats = ({
                 Total Sales: <Text as={"b"}>{totalSales}</Text>
             </Box>
             <Box>
-                Average Cost: <Text as={"b"}>{avgCost}</Text>
+                Average Cost: $<Text as={"b"}>{avgCost}</Text>
             </Box>
             <Box>
                 Maximum Sold Car:{" "}

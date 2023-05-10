@@ -32,7 +32,7 @@ const MapChart = ({ map_data, selectedState, handleStateSelect }) => {
     const colorScale = d3
         .scaleSequentialSqrt()
         .domain([0, Math.max(...Object.values(map_data))])
-        .interpolator(d3.interpolatePuBu);
+        .interpolator(d3.interpolateOrRd);
 
     return (
         <>

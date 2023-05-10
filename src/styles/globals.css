@@ -114,7 +114,7 @@ html[data-theme="dark"] .bb-tooltip td {
   color: black;
 }
 
-html[data-theme="dark"] path {
+html[data-theme="dark"] path, html[data-theme="dark"] .bb line {
   stroke: white;
 }
 
@@ -122,6 +122,10 @@ svg text {
   font-weight: bold;
   text-rendering: geometricPrecision;
   shape-rendering: crispEdges;
+}
+
+#price_mileage_plot .tick, #line_plot .tick {
+  font-size: 13px;
 }
 
 #tree_plot text:not(.bb-title) {

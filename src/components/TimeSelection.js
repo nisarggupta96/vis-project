@@ -31,17 +31,17 @@ const TimeSelection = ({ handleTimeChange }) => {
                     {year}
                 </RangeSliderMark>
             ))}
-            <RangeSliderTrack h={4} bg="red.100">
-                <RangeSliderFilledTrack bg="red" />
+            <RangeSliderTrack h={4} bg="#DADADA">
+                <RangeSliderFilledTrack bg="#0073D0" />
             </RangeSliderTrack>
             <RangeSliderThumb
-                borderColor={"red"}
+                borderColor={"#1D1F20"}
                 borderWidth={3}
                 boxSize={6}
                 index={0}
             />
             <RangeSliderThumb
-                borderColor={"red"}
+                borderColor={"#1D1F20"}
                 borderWidth={3}
                 boxSize={6}
                 index={1}
