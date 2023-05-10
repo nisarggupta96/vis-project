@@ -64,7 +64,13 @@ const MapChart = ({ map_data, selectedState, handleStateSelect }) => {
                                             key={geo.rsmKey}
                                             stroke="#FFF"
                                             geography={geo}
-                                            fill={colorScale(map_data[cur.id])}
+                                            fill={
+                                                map_data[cur.id]
+                                                    ? colorScale(
+                                                          map_data[cur.id]
+                                                      )
+                                                    : "#777"
+                                            }
                                             opacity={map_data[cur.id] ? 1 : 0.3}
                                             style={{
                                                 default: {
@@ -109,7 +115,11 @@ const MapChart = ({ map_data, selectedState, handleStateSelect }) => {
                                                             fontSize={6}
                                                             textAnchor="middle"
                                                             style={{
-                                                                fill: "black",
+                                                                fill:
+                                                                    selectedState ===
+                                                                    cur.id
+                                                                        ? "white"
+                                                                        : "black",
                                                             }}
                                                         >
                                                             {cur.id}
