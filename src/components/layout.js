@@ -96,7 +96,7 @@ export default function Nav({ children }) {
                 >
                     <Box>
                         <Text fontSize="xl">
-                            Used Car Analysis for United States (2000-2020)
+                            Used Car Analysis for United States (2000-2022)
                         </Text>
                     </Box>
 
