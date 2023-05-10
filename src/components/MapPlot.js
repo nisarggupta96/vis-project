@@ -42,7 +42,7 @@ const MapChart = ({ map_data, selectedState, handleStateSelect }) => {
                 fontWeight={"bold"}
                 fontSize={"16px"}
             >
-                Statewise Count
+                Statewise Sales
             </Text>
             <Box position={"relative"} style={{ height: "100%" }}>
                 <ComposableMap

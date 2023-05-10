@@ -65,7 +65,6 @@ export default function Nav({ children }) {
     }
 
     const handleTimeChange = (startYear, endYear) => {
-        console.log(startYear, endYear);
         setYearStart(startYear);
         setYearEnd(endYear);
     };
