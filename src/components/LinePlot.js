@@ -19,7 +19,7 @@ const LinePlot = ({ line_data }) => {
                 height: ref.current.clientHeight,
             },
             padding: {
-                bottom: 20,
+                bottom: 40,
             },
             data: {
                 columns: color_cyl_counts,

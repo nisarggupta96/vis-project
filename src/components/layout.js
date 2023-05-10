@@ -96,7 +96,8 @@ export default function Nav({ children }) {
                 >
                     <Box>
                         <Text fontSize="xl">
-                            Used Car Analysis for United States (2000-2022)
+                            Used Car Sales Analysis for United States
+                            (2000-2022)
                         </Text>
                     </Box>
 
@@ -139,7 +140,7 @@ export default function Nav({ children }) {
                                     handleStateSelect={handleStateSelect}
                                 />
                             </Box>
-                            <Box p={3} height={"50%"}>
+                            <Box pt={3} pb={0} height={"50%"}>
                                 <LinePlot line_data={line_data} />
                             </Box>
                         </Box>
@@ -197,7 +198,7 @@ export default function Nav({ children }) {
                         </Box>
                     </Box>
                 </Box>
-                <Box pt={3} pb={5} pl={10} pr={10} mt={"auto"} h="60px">
+                <Box pt={1} pb={5} pl={10} pr={10} mt={"auto"} h="60px">
                     <TimeSelection handleTimeChange={handleTimeChange} />
                 </Box>
             </Box>
