@@ -125,11 +125,11 @@ svg text {
 }
 
 #price_mileage_plot .tick, #line_plot .tick {
-  font-size: 13px;
+  font-size: 12px;
 }
 
 #tree_plot text:not(.bb-title) {
-  font-size: 13px;
+  font-size: 12px;
   transform: translateY(5px);
   font-weight: bold;
 }
