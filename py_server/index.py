@@ -92,7 +92,8 @@ def get_data():
     max_sale_model_count = df_filtered["model"].value_counts(
     ).sort_values(ascending=False).head(1)
 
-    max_sale_manufacturer = df_filtered.loc[df_filtered["model"] == max_sale_model_count.index[0]]["manufacturer"].head(1).values[0]
+    max_sale_manufacturer = df_filtered.loc[df_filtered["model"] ==
+                                            max_sale_model_count.index[0]]["manufacturer"].head(1).values[0]
 
     summary_data = {
         "total_sales_count": float(total_sales_count),
