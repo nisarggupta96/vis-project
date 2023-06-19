@@ -1,38 +1,34 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# CSE-564 - Visualization
 
-## Getting Started
+# Project
 
-First, run the development server:
+### Technologies Used
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+-   Next.js
+-   D3.js
+-   Chakra-UI
+-   Python
+-   Flask
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Data Source
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+-   https://www.kaggle.com/datasets/austinreese/craigslist-carstrucks-data
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+### About
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+The used car market in the United States is thriving, with millions of vehicles sold yearly. This market offers a wide variety of options for buyers, ranging from high-end luxury vehicles to affordable and practical models. The popularity of the used car market can be attributed to several factors, including the high cost of new vehicles, the specific attributes of a car, the availability of financing options, and the increasing reliability of modern vehicles.
+However, buyers and sellers must understand the market trends and factors influencing used car prices. With the increasing popularity of online platforms like Craigslist, CarMax, AutoTraders, etc., for buying and selling used cars, there is a need to explore and analyze the available data to make informed decisions. This project aims to investigate the used car dataset from Craigslist to identify trends and factors that affect the price of used cars. By analyzing the data and creating visualizations, we hope to gain insights that can be useful for buyers and sellers in the used car market.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Steps to run
 
-## Learn More
+-   Requires
+    -   Node.js installed with npm
+    -   Python (dependencies listed requirements.txt)
+-   Clone the repo and run `npm install` from terminal
+-   To start the python server, navigate to the py_server directory and run `python index.py`
+-   To start the next server, run `npm run dev` from terminal from root directory
+-   Open http://localhost:3000 on local browser
 
-To learn more about Next.js, take a look at the following resources:
+### Demo
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+-   https://used-car-analysis-vis-project.vercel.app/
